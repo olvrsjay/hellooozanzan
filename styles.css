@@ -1,0 +1,73 @@
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    background-color: #8B0000; /* Dark red background color */
+    background-image: url('your-image.jpg'); /* Replace with your image URL */
+    background-size: cover; /* Ensure the image covers the entire screen */
+    background-position: center; /* Center the image */
+}
+
+/* Container for content */
+.container {
+    text-align: center;
+    color: white;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    padding: 30px;
+    border-radius: 15px;
+    background-color: rgba(0, 0, 0, 0.5); /* Dark overlay on content */
+    max-width: 400px;
+    z-index: 1; /* Ensure content is above the background */
+}
+
+h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    animation: textAnimation 2s ease-in-out;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    color: white;
+    background-color: #FF69B4;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+button:hover {
+    background-color: #FF1493;
+    transform: scale(1.1);
+}
+
+img {
+    margin-top: 20px;
+    border-radius: 10px;
+    width: 100%;
+    max-width: 300px;
+    transition: opacity 0.5s ease-in-out;
+}
+
+/* Animations */
+@keyframes textAnimation {
+    0% {
+        transform: translateY(-20px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}

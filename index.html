@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>secret</title>
+    <link rel="stylesheet" href="styles.css">
+   
+</head>
+<body>
+
+    <div class="container">
+        <div class="content">
+            <h1 id="compliment">hii gwaaapaaa hehe</h1>
+            <button id="complimentButton" class="button">indi pag pinduta</button>
+            <img id="complimentImage" src="5.jpg" alt="Zanea's Image" />
+        </div>
+    </div>
+
+    <script>
+        const compliments = [
+            { text: "ngaa ka gwapaa simo haw??", img: "3.jpg" },
+            { text: "hi my idol hehe feel ko crush taka?", img: "4.jpg" },
+            { text: "Hellooo hehe js want to lyk nga ka pretty gid ya simo ah hehe", img: "6.jpg" },
+            { text: "hays ka cute gid ya kay zanea ah", img: "2.jpg" },
+            { text: "so beautiful gid bala ya simo hehe bal an mo man??", img: "2.jpg" }
+        ];
+
+        const complimentButton = document.getElementById("complimentButton");
+        const complimentText = document.getElementById("compliment");
+        const complimentImage = document.getElementById("complimentImage");
+
+        let currentIndex = 0;
+
+        complimentButton.addEventListener("click", () => {
+            currentIndex = (currentIndex + 1) % compliments.length;
+
+            complimentText.textContent = compliments[currentIndex].text;
+            complimentImage.src = compliments[currentIndex].img;
+        });
+    </script>
+
+</body>
+</html>
